@@ -46,7 +46,7 @@ let playerList = [
   console.log(playerList[1].favorites[1]);
 
 //Q5
-  console.log((playerList[0].age + playerList[1].age + playerList[2].age) / playerList.length);
+console.log((playerList[0].age + playerList[1].age + playerList[2].age) / playerList.length);
 
 //Q6
 function sayHello() {
@@ -68,33 +68,50 @@ console.log(user.sayHello);
 
 
 //Q8
-function add(x,y){
+let calc = {};
+
+calc.add=[5,2];
+calc.subtract=[15,5];
+calc.multiply=[7,7];
+calc.divide=[25,5];
+
+//足し算
+const add = calc.add[0] + calc.add[1];
+console.log(add);
+
+//引き算
+const subtract = calc.subtract[0] - calc.subtract[1];
+console.log(subtract);
+
+//かけ算
+const multiply = calc.multiply[0] * calc.multiply[1];
+console.log(multiply);
+
+//割り算
+const divide = calc.divide[0] / calc.divide[1];
+console.log(divide);
+
+/*
+calc.add(x,y){
   total = x + y;
   console.log(total);
 }
 
-function subtract(x,y){
+calc.subtract(x,y){
   total = x - y;
   console.log(total);
 }
 
-function multiply(x,y){
+calc.multiply(x,y){
   total = x * y;
   console.log(total);
 }
 
-function divide(x,y){
+calc.divide(x,y){
   total = x / y;
   console.log(total);
 }
-
-let calc = {
-  function: add(5,2),
-  function: subtract(15,5),
-  function: multiply(7,7),
-  function: divide(25,5),
-};
-
+*/
 
 
 //Q9 解けたが5を3での値をXYにすることは可能か？
@@ -156,6 +173,7 @@ if (num == 0) {
 for (let numbers = 0; numbers < 100; numbers++) {
   console.log(numbers);
 }
+
 
 
 //Q5
