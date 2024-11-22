@@ -121,21 +121,19 @@ function remainder(x,y) {
 
 console.log('5を3で割った余りは' + remainder(5,3) + 'です。');
 
-
 //Q10
 //function foo() {
   //let x = 1;
 //}
-//console.log(x);
-//変数の定義を関数の外でする必要がある。
-//関数の外で定義した変数は関数の中からでも参照することができるため、
-//この外側で定義した変数こそがグローバル変数になる。
+//スコープとは変数の有効範囲です。基本的に関数の中で宣言したものは関数内でしか利用することができません。
+//この場合は、関数の中でこの1の数値を宣言してしまっていることに問題があり、関数の中で宣言したものは
+//基本関数内でしか利用することができないため1の数値を参照し取り出せなくなっています。
+
 
 
 
 //応用編 問題
 //Q1
-
 let random = Math.floor(Math.random()*10);
 console.log(random);
 
@@ -154,9 +152,8 @@ functionData(function displayData(data) {
   console.log(data);
 });
 
-
 //Q3
-let num = '0';
+let num = 0;
 if (num == 0) {
   console.log('num is 0');
 }else if(num <= 0){
@@ -165,7 +162,9 @@ if (num == 0) {
   console.log('num is greater than 0');
 }
 
-//Q4
+//Q4 なおし
+numbers = [];
+
 for (let numbers = 0; numbers < 100; numbers++) {
   console.log(numbers);
 }
@@ -173,12 +172,13 @@ for (let numbers = 0; numbers < 100; numbers++) {
 //Q5
 //偶数奇数の式
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-for(let i=0; i < mixed.length; i++){
-  if(typeof mixed[i] === 'number' && mixed[i]%2===0){
-    console.log(mixed[i]+'は偶数');
-  }else if(typeof mixed[i] === 'number' && mixed[i]%2===1){
-    console.log(mixed[i]+'は奇数');
-  }else if(mixed[i] === '2'||'8'||'9'){
-    console.log(mixed[i]+'は文字列です。');
+
+for(let i = 0; i < mixed.length; i++){
+  if(typeof mixed[i] === 'number' && mixed[i] % 2 === 0){
+    console.log(mixed[i] + 'は偶数');
+  }else if(typeof mixed[i] === 'number' && mixed[i] % 2 === 1){
+    console.log(mixed[i] + 'は奇数');
+  }else{
+    console.log(mixed[i] + 'は文字列です。');
   }
 }
