@@ -76,20 +76,28 @@ user.sayHello();
 let calc = {};
 
 //足し算
-calc.add = 5 + 2;
-console.log(calc.add);
+calc.add = (x,y) =>{
+ console.log(x + y);
+}
+calc.add(5,2);
 
 //引き算
-calc.subtract = 15 - 5;
-console.log(calc.subtract);
+calc.subtract = (x,y) =>{
+  console.log(x - y);
+}
+calc.subtract(15,5);
 
 //かけ算
-calc.multiply = 7 * 7;
-console.log(calc.multiply);
+calc.multiply = (x,y) =>{
+  console.log(x * y);
+}
+calc.multiply(7,7);
 
 //割り算
-calc.divide = 25 / 5;
-console.log(calc.divide);
+calc.divide = (x,y) =>{
+  console.log(x / y);
+}
+
 
 /*
 calc.add(x,y){
@@ -131,7 +139,6 @@ console.log('5を3で割った余りは' + remainder(5,3) + 'です。');
 
 
 
-
 //応用編 問題
 //Q1
 let random = Math.floor(Math.random()*10);
@@ -163,12 +170,13 @@ if (num == 0) {
 }
 
 //Q4 なおし
-numbers = [];
+let numbers = [];
 
-numbers.num
-for (let numbers = 0; numbers < 100; numbers++) {
+numbers
+for (let i = 0; i < 100; i++) {
+  numbers[i] = i;
+ }
   console.log(numbers);
-}
 
 //Q5
 //偶数奇数の式
