@@ -165,6 +165,7 @@ if (num == 0) {
 //Q4 なおし
 numbers = [];
 
+numbers.num
 for (let numbers = 0; numbers < 100; numbers++) {
   console.log(numbers);
 }
