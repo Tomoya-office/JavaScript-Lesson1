@@ -5,7 +5,6 @@ let text = `私のニックネームは${name}です。年齢は${age}歳です�
 
 console.log(text);
 
-
 //Q2
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
 
@@ -17,9 +16,6 @@ let user = {
     age: 26,
     bloodType: 'A',
     favorite: 'card',
-    
-    birthday: '2000-09-27',//Q7の追加分。
-    sayHello: 'Hello！',
   };
 
   console.log(user.age);
@@ -45,14 +41,13 @@ let playerList = [
 
   console.log(playerList[1].favorites[1]);
 
-//Q5
+//Q5　プレイヤーが増えてもいいようにコードを書き換える。
 console.log((playerList[0].age + playerList[1].age + playerList[2].age) / playerList.length);
 
 //Q6
 function sayHello() {
   console.log('Hellow');
 }
-
 sayHello();
 
 
@@ -63,33 +58,33 @@ sayWorld();
 
 
 //Q7
-console.log(user.birthday);
-console.log(user.sayHello);
+user.birthday='2000-09-27'
+
+user.sayHello = () => {
+  console.log('Hello！');
+}
+
+user.sayHello();
 
 
-//Q8
+//Q8 メソッドをカラムオブジェクトに追加して実行する。
 let calc = {};
 
-calc.add=[5,2];
-calc.subtract=[15,5];
-calc.multiply=[7,7];
-calc.divide=[25,5];
-
 //足し算
-const add = calc.add[0] + calc.add[1];
-console.log(add);
+calc.add = 5 + 2;
+console.log(calc.add);
 
 //引き算
-const subtract = calc.subtract[0] - calc.subtract[1];
-console.log(subtract);
+calc.subtract = 15 - 5;
+console.log(calc.subtract);
 
 //かけ算
-const multiply = calc.multiply[0] * calc.multiply[1];
-console.log(multiply);
+calc.multiply = 7 * 7;
+console.log(calc.multiply);
 
 //割り算
-const divide = calc.divide[0] / calc.divide[1];
-console.log(divide);
+calc.divide = 25 / 5;
+console.log(calc.divide);
 
 /*
 calc.add(x,y){
@@ -113,9 +108,7 @@ calc.divide(x,y){
 }
 */
 
-
 //Q9 解けたが5を3での値をXYにすることは可能か？
-
 function remainder(x,y) {
   let argument = x % y;
   return argument;
@@ -129,18 +122,17 @@ console.log('5を3で割った余りは' + remainder(5,3) + 'です。');
   //let x = 1;
 //}
 //console.log(x);
-//変数の定義を関数の外でする必要がある。関数の外で定義した変数は関数の中からでも参照することができるため、この外側で定義した変数こそがグローバル変数になる。
+//変数の定義を関数の外でする必要がある。
+//関数の外で定義した変数は関数の中からでも参照することができるため、
+//この外側で定義した変数こそがグローバル変数になる。
 
 
 
 //応用編 問題
-
 //Q1
 
 let random = Math.floor(Math.random()*10);
-
 console.log(random);
-
 
 
 //Q2
@@ -160,7 +152,6 @@ functionData(function displayData(data) {
 
 //Q3
 let num = '0';
-
 if (num == 0) {
   console.log('num is 0');
 }else if(num <= 0){
@@ -174,13 +165,9 @@ for (let numbers = 0; numbers < 100; numbers++) {
   console.log(numbers);
 }
 
-
-
 //Q5
-
 //偶数奇数の式
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-
 for(let i=0; i < mixed.length; i++){
   if(typeof mixed[i] === 'number' && mixed[i]%2===0){
     console.log(mixed[i]+'は偶数');
