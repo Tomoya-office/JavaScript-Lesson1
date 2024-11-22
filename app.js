@@ -41,8 +41,13 @@ let playerList = [
 
   console.log(playerList[1].favorites[1]);
 
-//Q5　プレイヤーが増えてもいいようにコードを書き換える。
-console.log((playerList[0].age + playerList[1].age + playerList[2].age) / playerList.length);
+//Q5　プレイヤーが増えてもいいようにコードを書き換えました。
+let sum=0;
+
+for(i=0; i < playerList.length; i++){
+  sum += playerList[i].age;
+}
+console.log(sum / playerList.length);
 
 //Q6
 function sayHello() {
@@ -67,7 +72,7 @@ user.sayHello = () => {
 user.sayHello();
 
 
-//Q8 メソッドをカラムオブジェクトに追加して実行する。
+//Q8
 let calc = {};
 
 //足し算
@@ -108,7 +113,7 @@ calc.divide(x,y){
 }
 */
 
-//Q9 解けたが5を3での値をXYにすることは可能か？
+//Q9
 function remainder(x,y) {
   let argument = x % y;
   return argument;
